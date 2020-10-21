@@ -78,6 +78,7 @@ Constant pool:
     flags: ACC_PUBLIC
     Code:
       stack=1, locals=1, args_size=1
+         # this指针
          0: aload_0
          1: invokespecial #1                  // Method java/lang/Object."<init>":()V
          4: return
@@ -94,30 +95,38 @@ Constant pool:
       stack=4, locals=11, args_size=1
          0: iconst_1
          1: istore_1
+
          2: iconst_2
          3: istore_2
+         # 加法
          4: iload_1
          5: iload_2
          6: iadd
          7: istore_3
+         # 除法
          8: iload_3
          9: iload_2
         10: idiv
         11: istore        4
+        # 取余
         13: iload_3
         14: iload_2
         15: irem
         16: istore        5
+        # 乘法
         18: iload_3
         19: iload_2
         20: imul
         21: istore        6
+        # 大于5的赋值
         23: bipush        7
         25: istore        7
         27: sipush        128
         30: istore        8
+        # 较大数的赋值
         32: ldc           #7                  // int 65536
         34: istore        9
+        # if比较
         36: iload         7
         38: iload         6
         40: if_icmple     52
@@ -127,9 +136,11 @@ Constant pool:
         47: istore        8
         49: goto          55
         52: iinc          8, 20
+        # for循环
         55: iconst_0
         56: istore        10
         58: iload         10
+        # 判断j < 5
         60: iconst_5
         61: if_icmpge     96
         64: getstatic     #8                  // Field java/lang/System.out:Ljava/io/PrintStream;
@@ -142,8 +153,11 @@ Constant pool:
         81: invokevirtual #23                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
         84: invokevirtual #26                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
         87: invokevirtual #30                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        # j++
         90: iinc          10, 1
         93: goto          58
+        # for循环结束
+
         96: getstatic     #8                  // Field java/lang/System.out:Ljava/io/PrintStream;
         99: new           #14                 // class java/lang/StringBuilder
        102: dup
