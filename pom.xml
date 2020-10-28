@@ -10,6 +10,7 @@
   <version>0.1-SNAPSHOT</version>
   <modules>
     <module>week01</module>
+    <module>week02</module>
   </modules>
 
   <name>java-parent</name>
