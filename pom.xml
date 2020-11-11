@@ -12,6 +12,7 @@
     <module>week01</module>
     <module>week02</module>
     <module>week03</module>
+    <module>week04</module>
   </modules>
 
   <name>java-parent</name>
@@ -19,6 +20,8 @@
   <url>http://www.example.com</url>
 
   <properties>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
