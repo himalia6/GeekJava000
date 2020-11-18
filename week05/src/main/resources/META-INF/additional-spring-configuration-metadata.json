@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "school.open",
+      "type": "java.lang.String",
+      "description": "Description for school.open."
+  },
+    {
+      "name": "school.name",
+      "type": "java.lang.String",
+      "description": "Description for school.open."
+    }
+]
+}
