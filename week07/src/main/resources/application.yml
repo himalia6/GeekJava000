@@ -1,0 +1,17 @@
+spring:
+  primary:
+    datasource:
+      poolname: primary
+      username: root
+      password: root
+      driver: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:33060/book?useSSL=false
+      readonly: false
+  replica1:
+    datasource:
+      poolname: replica1
+      username: root
+      password: root
+      driver: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:33061/book?useSSL=false
+      readonly: true
