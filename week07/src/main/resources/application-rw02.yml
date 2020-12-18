@@ -1,0 +1,96 @@
+dataSources:
+  primary-ds-0:
+    driverClassName: com.mysql.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:33060/demo-primary-ds-0?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+  primary-ds-0-replica-0:
+    driverClassName: com.mysql.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:33060/book-ds-0-replica-0?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+  primary-ds-0-replica-1:
+    driverClassName: com.mysql.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:33060/book-ds-0-replica-1?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+  primary-ds-1:
+    driverClassName: com.mysql.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:33061/book-ds-1?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+  primary-ds-1-replica-0:
+    driverClassName: com.mysql.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:33061/book-ds-1-replica-0?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+  primary-ds-1-replica-1:
+    driverClassName: com.mysql.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:33061/book-ds-1-replica-1?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+
+rules:
+#  - tables:
+#      t-order:
+#        actualDataNodes: ds-${0..1}.t-order-${0..1}
+#        tableStrategy:
+#          standard:
+#            shardingColumn: order-id
+#            shardingAlgorithmName: t-order-inline
+#        keyGenerateStrategy:
+#          column: order-id
+#          keyGeneratorName: snowflake
+#      t-order-item:
+#        actualDataNodes: ds-${0..1}.t-order-item-${0..1}
+#        tableStrategy:
+#          standard:
+#            shardingColumn: order-id
+#            shardingAlgorithmName: t-order-item-inline
+#        keyGenerateStrategy:
+#          column: order-id
+#          keyGeneratorName: snowflake
+#    bindingTables:
+#      - t-order,t-order-item
+#    broadcastTables:
+#      - t-address
+#    defaultDatabaseStrategy:
+#      standard:
+#        shardingColumn: user-id
+#        shardingAlgorithmName: database-inline
+#
+#    shardingAlgorithms:
+#      database-inline:
+#        type: INLINE
+#        props:
+#          algorithm-expression: ds-${user-id % 2}
+#      t-order-inline:
+#        type: INLINE
+#        props:
+#          algorithm-expression: t-order-${order-id % 2}
+#      t-order-item-inline:
+#        type: INLINE
+#        props:
+#          algorithm-expression: t-order-item-${order-id % 2}
+#
+#    keyGenerators:
+#      snowflake:
+#        type: SNOWFLAKE
+#        props:
+#          worker-id: 123
+#
+#  - dataSources:
+#      ds-0:
+#        primaryDataSourceName: primary-ds-0
+#        replicaDataSourceNames: [primary-ds-0-replica-0, primary-ds-0-replica-1]
+#        loadBalancerName: roundRobin
+#      ds-1:
+#        primaryDataSourceName: primary-ds-1
+#        replicaDataSourceNames: [primary-ds-1-replica-0, primary-ds-1-replica-1]
+#        loadBalancerName: roundRobin
+#    loadBalancers:
+#      roundRobin:
+#        type: 'ROUNDROBIN'
+
+props:
+  sql-show: false

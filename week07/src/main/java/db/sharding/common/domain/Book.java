@@ -1,4 +1,4 @@
-package db.sharding.rw01.domain;
+package db.sharding.common.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,6 +1,6 @@
-package db.sharding.rw01.dao;
+package db.sharding.common.dao;
 
-import db.sharding.rw01.domain.Book;
+import db.sharding.common.domain.Book;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.repository.CrudRepository;
 

@@ -1,7 +1,7 @@
 package db.sharding.rw01.service;
 
-import db.sharding.rw01.dao.BookRepository;
-import db.sharding.rw01.domain.Book;
+import db.sharding.common.dao.BookRepository;
+import db.sharding.common.domain.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

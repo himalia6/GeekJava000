@@ -1,7 +1,7 @@
-package db.sharding.rw01.controller;
+package db.sharding.rw02.controller;
 
 import db.sharding.common.domain.Book;
-import db.sharding.rw01.service.BookService;
+import db.sharding.rw02.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
