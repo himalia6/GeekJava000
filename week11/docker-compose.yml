@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  redis:
+    image: redis:latest
+    volumes:
+      - redis-data:/var/lib/redis
+    ports:
+      - 63790:6379
+volumes:
+  redis-data:
+    driver: local
+
