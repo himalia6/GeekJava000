@@ -19,6 +19,7 @@
         <module>week08</module>
         <module>week09</module>
         <module>week11</module>
+        <module>week12</module>
     </modules>
 
     <name>java-parent</name>
